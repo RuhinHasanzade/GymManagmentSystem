@@ -15,7 +15,7 @@ namespace FinalPratic2.ViewModels.TrainerViewModel
         [Range(18,80)]
         public int Age { get; set; }
 
-        [Range(3,30)]
+        [Range(4,30 , ErrorMessage = "Experience 3 den boyuk olmalidir?")]
         public int Experience { get; set; }
 
         public int CategoryId { get; set; }

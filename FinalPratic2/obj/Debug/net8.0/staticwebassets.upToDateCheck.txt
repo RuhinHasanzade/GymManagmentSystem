@@ -953,3 +953,4 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\images\c3707ef7-82ff-4873-9bec-d20e965c23ceScreenshot 2025-12-25 003205.png

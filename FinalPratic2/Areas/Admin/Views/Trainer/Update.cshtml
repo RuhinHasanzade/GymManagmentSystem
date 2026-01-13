@@ -1,14 +1,14 @@
-﻿@model TrainerCreateVm
+﻿@model TrainerUpdateVm
 
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card shadow">
                 <div class="card-header text-center">
-                    <h4>Add Trainer</h4>
+                    <h4>Update Trainer</h4>
                 </div>
                 <div class="card-body">
-                    <form method="post" asp-controller="Trainer" asp-action="Create" enctype="multipart/form-data">
+                    <form method="post" asp-controller="Trainer" asp-action="Update" enctype="multipart/form-data">
                         <div asp-validation-summary="ModelOnly"></div>
                         <div class="mb-3">
                             <label class="form-label">Trainer Name</label>
@@ -16,7 +16,7 @@
                             <span asp-validation-for="Name" class="text-danger"></span>
                         </div>
 
-                
+
                         <div class="mb-3">
                             <label class="form-label">Description</label>
                             <input type="text" asp-for="Description" class="form-control" placeholder="Enter price">
@@ -35,7 +35,7 @@
                         </div>
 
                         <select asp-for="CategoryId">
-                            @foreach(Category category in ViewBag.Categories)
+                            @foreach (Category category in ViewBag.Categories)
                             {
                                 <option value="@category.Id">
                                     @category.Name
@@ -43,15 +43,15 @@
                             }
                         </select>
 
-                     
+
                         <div class="mb-3">
                             <label class="form-label">Image Name</label>
                             <input type="file" class="form-control" asp-for="Image" placeholder="Enter image name">
                             <span asp-validation-for="Image" class="text-danger"></span>
                         </div>
 
-                   
-                        
+
+
 
                         <button type="submit" class="btn btn-primary w-100">
                             Save Product
