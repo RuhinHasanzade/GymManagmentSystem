@@ -1,0 +1,47 @@
+﻿@model List<TrainerGetVm>
+
+<div class="container">
+
+    <div class="row">
+        <div class="row">
+            <a class="btn btn-success col-2" asp-action="Create">Create +</a>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+
+                    <th scope="col">ID</th>
+                    <th scope="col">NAME</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Experience</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var trainer in Model)
+                {
+                    <tr>
+                        <th scope="row">@trainer.Id</th>
+                        <td>@trainer.Name</td>
+                        <td>@trainer.Description</td>
+                        <td>@trainer.Age</td>
+                        <td>@trainer.Experience</td>
+                        <td>@trainer.CategoryName</td>
+                        <td>
+                            <img src="~/images/@trainer.ImagePath" alt="Alternate Text" />
+                        </td>
+                       
+                        <td>
+                            <a asp-action="Update" asp-route-id="@trainer.Id " class="btn btn-warning">Update</a>
+                            <a asp-action="Delete" asp-route-id="@trainer.Id" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
